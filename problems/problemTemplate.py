@@ -12,12 +12,13 @@ soup = BeautifulSoup(urlpage.text, 'html.parser')
 
 # extract page data
 header = soup.h2.text
-p = soup.p(attr={'class': 'problem_content'})
+p = [i.text for i in soup.div.findChildren('p')]
 
 # format page data as markdown
-markdown = '# %s\n## %s\n%s\nAnswer: ' % (header, str(argv[1]), '\n'.join(p))
+markdown = '# %s\n## %s\n%s\n\n\nAnswer: ' % (header, str(argv[1]), '\n'.join(p))
 if len(argv) == 3:
     markdown += str(argv[2])
+print(markdown)
 
 # create/access problem's folder
 path = '%s/%s' % (os.getcwd(), str(argv[1]))
