@@ -27,3 +27,6 @@ result:
 - **25164150** will be written to answer.txt inside of directory 6
 
 When you are done, you can submit a pull request.
+
+### Some of the exercises have a solution.py in them. What is that?
+I created this project while doing the projecteuler exercises myself, so those python files are my personal solution. They might be helpful to you if you are stuck and not sure what you should do. 
