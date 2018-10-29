@@ -15,10 +15,7 @@ header = soup.h2.text
 p = [i.text for i in soup.div.findChildren('p')]
 
 # format page data as markdown
-markdown = '# %s\n## %s\n%s\n\n\nAnswer: ' % (header, str(argv[1]), '\n'.join(p))
-if len(argv) == 3:
-    markdown += str(argv[2])
-print(markdown)
+markdown = '# %s\n## %s\n\n%s' % (header, str(argv[1]), '\n'.join(p))
 
 # create/access problem's folder
 path = '%s/%s' % (os.getcwd(), str(argv[1]))
@@ -28,3 +25,8 @@ if not os.path.exists(path):
 # write readme
 with open(path + '/README.md', 'w') as f:
     f.write(markdown)
+
+# write answer if available
+if len(argv) == 3:
+    with open(path + '/answer.txt', 'w') as f:
+        f.write(argv[2])
