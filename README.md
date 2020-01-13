@@ -29,7 +29,9 @@ result:
 When you are done, you can submit a pull request.
 
 ### Some of the exercises have a solution.py in them. What is that?
-I created this project while doing the projecteuler exercises myself, so those python files are my personal solution. They might be helpful to you if you are stuck and not sure what you should do. 
+I created this project while doing the projecteuler exercises myself, so those python files are my personal solution. They might be helpful to you if you are stuck and not sure what you should do.
+
+**Update:** There now might also be a solution.go file because I'm trying out golang.
 
 ### Aren't you worried that people will use this repo to cheat?
 No. If you're going to cheat, you are making a choice to cheat yourself out of an education. And if you are going to cheat, you are going to do it regardless of whether this repo exists or not. This repo is here to make project euler more accessible to others.
