@@ -1,6 +1,6 @@
 # NOTE: This does not work if largest prime factor of n > 104729
 
-def findLargestPrimeFactorOfN(n=600851475143):
+def get_largest_prime_factor_of_n(n=600851475143):
     # import csv containing first 10,000 primes
     with open('primes.csv', 'r') as f:
         primes = f.read()
@@ -14,4 +14,4 @@ def findLargestPrimeFactorOfN(n=600851475143):
     return max(factors)                                                         # print largest prime that is a factor of n
 
 if __name__ == "__main__":
-    print(findLargestPrimeFactorOfN())
+    print(get_largest_prime_factor_of_n())
